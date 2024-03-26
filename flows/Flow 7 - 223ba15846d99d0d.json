@@ -1,0 +1,159 @@
+[
+  {
+    "id": "223ba15846d99d0d",
+    "type": "tab",
+    "label": "Flow 7",
+    "disabled": false,
+    "info": "",
+    "env": [],
+    "flowCategory": {
+      "value": "",
+      "label": "---"
+    },
+    "dbPanelCode": ""
+  },
+  {
+    "id": "72e206423b6bf41f",
+    "type": "spinal-consumer",
+    "z": "223ba15846d99d0d",
+    "name": "Test Consumer",
+    "outOfRangeOffset": "earliest",
+    "fromOffset": "latest",
+    "topic": "spinal.cmdk.mailbox.Test",
+    "groupid": "",
+    "connection": {
+      "name": "broker name",
+      "host": "localhost:9092"
+    },
+    "broker": "0",
+    "x": 320,
+    "y": 260,
+    "wires": [
+      [
+        "310256171c15935b"
+      ]
+    ]
+  },
+  {
+    "id": "3c6eb0c0939a3229",
+    "type": "function",
+    "z": "223ba15846d99d0d",
+    "parameters": [],
+    "name": "function 1",
+    "func": "console.log(`received message! ${msg.payload}`)\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 700,
+    "y": 260,
+    "wires": [
+      [
+        "433d4b81bae437b4"
+      ]
+    ]
+  },
+  {
+    "id": "433d4b81bae437b4",
+    "type": "debug",
+    "z": "223ba15846d99d0d",
+    "name": "debug 1",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 960,
+    "y": 260,
+    "wires": []
+  },
+  {
+    "id": "ef5169f95116d7f1",
+    "type": "spinal-producer",
+    "z": "223ba15846d99d0d",
+    "name": "Test Producer",
+    "topic": "spinal.cmdk.mailbox.Test",
+    "advancedoptions": false,
+    "acknowledge": "all",
+    "partition": "",
+    "headeritems": {},
+    "key": "",
+    "responsetimeout": 30000,
+    "transactiontimeout": 60000,
+    "metadatamaxage": 300000,
+    "allowautotopiccreation": false,
+    "connection": {
+      "name": "broker name",
+      "host": "localhost:9092"
+    },
+    "broker": "0",
+    "x": 980,
+    "y": 460,
+    "wires": []
+  },
+  {
+    "id": "2409f56a4dbfaae4",
+    "type": "inject",
+    "z": "223ba15846d99d0d",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "{\"metadata\":{\"instanceId\":123}}",
+    "payloadType": "json",
+    "x": 570,
+    "y": 460,
+    "wires": [
+      [
+        "6dd1500709f2d366"
+      ]
+    ]
+  },
+  {
+    "id": "6dd1500709f2d366",
+    "type": "json",
+    "z": "223ba15846d99d0d",
+    "name": "",
+    "property": "payload",
+    "action": "",
+    "pretty": false,
+    "x": 770,
+    "y": 460,
+    "wires": [
+      [
+        "ef5169f95116d7f1"
+      ]
+    ]
+  },
+  {
+    "id": "310256171c15935b",
+    "type": "json",
+    "z": "223ba15846d99d0d",
+    "name": "",
+    "property": "payload",
+    "action": "",
+    "pretty": false,
+    "x": 510,
+    "y": 260,
+    "wires": [
+      [
+        "3c6eb0c0939a3229"
+      ]
+    ]
+  }
+]
