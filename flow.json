@@ -1,5 +1,13 @@
 [
     {
+        "id": "3e5f4292765aba09",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "223ba15846d99d0d",
         "type": "tab",
         "label": "Flow 7",
@@ -11,6 +19,87 @@
             "label": "---"
         },
         "dbPanelCode": ""
+    },
+    {
+        "id": "89278461fba65c6b",
+        "type": "inject",
+        "z": "3e5f4292765aba09",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 400,
+        "y": 300,
+        "wires": [
+            [
+                "789948cb357720ed"
+            ]
+        ]
+    },
+    {
+        "id": "789948cb357720ed",
+        "type": "function",
+        "z": "3e5f4292765aba09",
+        "parameters": [],
+        "name": "function 1",
+        "func": "console.log(\"test\")\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 300,
+        "wires": [
+            [
+                "a5104d6f64319cb9"
+            ]
+        ]
+    },
+    {
+        "id": "de3ee797632ef070",
+        "type": "debug",
+        "z": "3e5f4292765aba09",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1020,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "a5104d6f64319cb9",
+        "type": "json",
+        "z": "3e5f4292765aba09",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 830,
+        "y": 300,
+        "wires": [
+            [
+                "de3ee797632ef070"
+            ]
+        ]
     },
     {
         "id": "72e206423b6bf41f",
