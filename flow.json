@@ -1,6 +1,6 @@
 [
     {
-        "id": "12e7ca569e714da7",
+        "id": "f5ac6c35a5ca248a",
         "type": "tab",
         "label": "Flow 1",
         "disabled": false,
@@ -8,38 +8,25 @@
         "env": []
     },
     {
-        "id": "96672beddbcdbd79",
-        "type": "inject",
-        "z": "12e7ca569e714da7",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 360,
-        "y": 320,
+        "id": "799b88380b324f14",
+        "type": "spinal-consumer",
+        "z": "f5ac6c35a5ca248a",
+        "outOfRangeOffset": "earliest",
+        "fromOffset": "latest",
+        "connection": [],
+        "broker": "0",
+        "x": 300,
+        "y": 460,
         "wires": [
             [
-                "20fa968b2b7d8555"
+                "368403f207a728b7"
             ]
         ]
     },
     {
-        "id": "20fa968b2b7d8555",
+        "id": "368403f207a728b7",
         "type": "function",
-        "z": "12e7ca569e714da7",
+        "z": "f5ac6c35a5ca248a",
         "parameters": [],
         "name": "function 1",
         "func": "\nreturn msg;",
@@ -48,10 +35,28 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 580,
-        "y": 320,
+        "x": 540,
+        "y": 460,
         "wires": [
-            []
+            [
+                "594f8e71f00c4523"
+            ]
         ]
+    },
+    {
+        "id": "594f8e71f00c4523",
+        "type": "debug",
+        "z": "f5ac6c35a5ca248a",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 460,
+        "wires": []
     }
 ]
