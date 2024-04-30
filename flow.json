@@ -1,6 +1,6 @@
 [
     {
-        "id": "70720a8b5c33a06d",
+        "id": "bfe39e430359719f",
         "type": "tab",
         "label": "Flow 1",
         "disabled": false,
@@ -8,9 +8,9 @@
         "env": []
     },
     {
-        "id": "c6c1e25357c21442",
+        "id": "3677e7686c4055f5",
         "type": "inject",
-        "z": "70720a8b5c33a06d",
+        "z": "bfe39e430359719f",
         "name": "",
         "props": [
             {
@@ -28,7 +28,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 680,
+        "x": 580,
         "y": 280,
         "wires": [
             []
