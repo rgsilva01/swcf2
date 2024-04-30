@@ -28,7 +28,27 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 620,
+        "x": 360,
+        "y": 320,
+        "wires": [
+            [
+                "20fa968b2b7d8555"
+            ]
+        ]
+    },
+    {
+        "id": "20fa968b2b7d8555",
+        "type": "function",
+        "z": "12e7ca569e714da7",
+        "parameters": [],
+        "name": "function 1",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
         "y": 320,
         "wires": [
             []
