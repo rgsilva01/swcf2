@@ -1,6 +1,6 @@
 [
     {
-        "id": "2da2df02cdba2e70",
+        "id": "94b9f946ab52cd13",
         "type": "tab",
         "label": "Flow 1",
         "disabled": false,
@@ -8,9 +8,9 @@
         "env": []
     },
     {
-        "id": "266a70ef62fa08dd",
+        "id": "46fcc69072c6d7b5",
         "type": "inject",
-        "z": "2da2df02cdba2e70",
+        "z": "94b9f946ab52cd13",
         "name": "",
         "props": [
             {
@@ -28,28 +28,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 440,
-        "y": 320,
-        "wires": [
-            [
-                "1909a5cfcd528763"
-            ]
-        ]
-    },
-    {
-        "id": "1909a5cfcd528763",
-        "type": "function",
-        "z": "2da2df02cdba2e70",
-        "parameters": [],
-        "name": "function 1",
-        "func": "console.log(msg);\nconsole.log(\"test\")\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 660,
-        "y": 320,
+        "x": 480,
+        "y": 280,
         "wires": [
             []
         ]
