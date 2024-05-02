@@ -1,0 +1,75 @@
+[
+  {
+    "id": "80db518c43e1340a",
+    "type": "tab",
+    "label": "Flow 1",
+    "disabled": false,
+    "info": "",
+    "env": []
+  },
+  {
+    "id": "9d99919d90f3392b",
+    "type": "inject",
+    "z": "80db518c43e1340a",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 340,
+    "y": 380,
+    "wires": [
+      [
+        "76670186de325608"
+      ]
+    ]
+  },
+  {
+    "id": "76670186de325608",
+    "type": "function",
+    "z": "80db518c43e1340a",
+    "parameters": [],
+    "name": "function 1",
+    "func": "\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 540,
+    "y": 380,
+    "wires": [
+      [
+        "cbf0f3d4afd14c88"
+      ]
+    ]
+  },
+  {
+    "id": "cbf0f3d4afd14c88",
+    "type": "debug",
+    "z": "80db518c43e1340a",
+    "name": "debug 1",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "false",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 740,
+    "y": 380,
+    "wires": []
+  }
+]
